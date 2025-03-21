@@ -89,6 +89,7 @@ const Home = () => {
         <div className="newsletter-form">
           <input type="email" placeholder="Enter your email" />
           <button>Subscribe</button>
+          <button>Learn More</button>
         </div>
       </div>
     </div>
