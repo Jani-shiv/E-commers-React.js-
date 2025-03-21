@@ -1,0 +1,139 @@
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: navbarGlow 3s infinite alternate;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+/* Navbar Glow Animation */
+@keyframes navbarGlow {
+  from { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
+  to { box-shadow: 0 4px 25px rgba(78, 205, 196, 0.4); }
+}
+
+/* Brand Name */
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  animation: brandPulse 2s infinite;
+}
+
+/* Brand Animation */
+@keyframes brandPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Logo Text */
+.logo {
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Individual Nav Links */
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Underline Effect */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+/* Hover Effects */
+.nav-link:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Menu Button (For Mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+}
