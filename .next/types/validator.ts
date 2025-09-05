@@ -33,9 +33,39 @@ type PagesPageConfig = {
   handler satisfies PagesPageConfig
 }
 
+// Validate ../../pages/about.tsx
+{
+  const handler = {} as typeof import("../../pages/about.js")
+  handler satisfies PagesPageConfig
+}
+
+// Validate ../../pages/cart.tsx
+{
+  const handler = {} as typeof import("../../pages/cart.js")
+  handler satisfies PagesPageConfig
+}
+
+// Validate ../../pages/contact.tsx
+{
+  const handler = {} as typeof import("../../pages/contact.js")
+  handler satisfies PagesPageConfig
+}
+
+// Validate ../../pages/enhanced-home.tsx
+{
+  const handler = {} as typeof import("../../pages/enhanced-home.js")
+  handler satisfies PagesPageConfig
+}
+
 // Validate ../../pages/index.tsx
 {
   const handler = {} as typeof import("../../pages/index.js")
+  handler satisfies PagesPageConfig
+}
+
+// Validate ../../pages/products.tsx
+{
+  const handler = {} as typeof import("../../pages/products.js")
   handler satisfies PagesPageConfig
 }
 
