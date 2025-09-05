@@ -1,43 +1,46 @@
-# Getting Started with Create React App
+# E-commers Pro (2025)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+- Next.js (SSR/SSG, SEO, file-based routing)
+- TypeScript (type safety)
+- TailwindCSS (responsive, accessible UI, dark/light mode)
+- Redux Toolkit (global state: cart, user, theme)
+- React Query (data fetching, caching)
+- Stripe/PayPal integration
+- JWT/OAuth authentication
+- Product catalog, cart, wishlist, checkout, order history
+- Analytics (Google Analytics, Mixpanel)
+- PWA (offline, push notifications)
+- i18n (multiple languages/currencies)
+- Accessibility (WCAG, ARIA, keyboard navigation)
+- Testing (Jest, React Testing Library, Cypress)
+- Docker, CI/CD (GitHub Actions)
+- Documentation
 
-## Available Scripts
+## Setup
+1. Clone the repo
+2. Install dependencies: `npm install`
+3. Configure environment variables in `.env.local`
+4. Run locally: `npm run dev`
+5. Build for production: `npm run build`
+6. Run tests: `npm test` (unit), `npm run cypress` (e2e)
+7. Deploy: Vercel/Netlify/AWS Amplify
 
-In the project directory, you can run:
+## Customization
+- Update theme/colors in `tailwind.config.js`
+- Add new features in `src/features`
+- Integrate APIs in `src/services`
+- Add assets in `src/assets`
 
-### `npm start`
+## Deployment
+- Docker: `docker build -t e-commers-pro .`
+- CI/CD: See `.github/workflows/ci.yml`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Documentation
+- See `/docs` for API and contribution guidelines
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
+For full details, see the in-app documentation and comments throughout the codebase.
 
 ## Learn More
 
